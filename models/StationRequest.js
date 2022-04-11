@@ -1,0 +1,61 @@
+const mongoose = require('mongoose');
+
+const StationRequestSchema = new mongoose.Schema({
+    
+    ownerId:{
+        type:String,
+        required:true,
+    },
+    ownerName:
+    {
+        type:String,
+        required:true,      
+    },
+    StationName:{
+        type:String,
+        required:true
+    },
+    ContactNo:{
+        type:String,
+        required:true
+    },
+    address:{
+        type:String,
+        unique:true,
+        required:true
+    },
+    city:{
+        type:String,
+        required:true,     
+    },
+    state:{
+        type:String,
+        required:true
+    },  
+    pincode:{
+        type:Number,
+        required:true,
+    },
+    openingTime:{
+        type:String,
+        required:true
+    },
+    closeTime:{
+        type:String,
+        required:true
+    },
+    image:{
+        type:String,
+        required:true
+    },
+    Plug:{
+        type:String,
+        required:true
+    },
+    AdharCardNo:{
+        type:Number,
+        required:true
+    }
+})
+
+mongoose.model('StationRequest',StationRequestSchema);  
